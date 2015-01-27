@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<link href="{% static "css/styles.css" %}" rel="stylesheet">
+<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+<div class="container" style="width:600px">
+<div class="jumbotron">
+
+<div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><a href="http://127.0.0.1:8000" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> Back</a> Account Settings </h3>
+        </div>
+        <div class="panel-body">
+         <form method="POST" action="." role="form" class="form-horizontal">
+			{% csrf_token %}
+          <fieldset>
+            <div class="form-group ">
+              <label for="email" class="col-lg-4 control-label">Username</label>
+              <div class="col-lg-8">
+                <input class="form-control" placeholder="Username" name="username" type="text">       
+               </div>
+
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-lg-4 control-label">Email</label>
+              <div class="col-lg-8">
+                 <input class="form-control" placeholder="E-mail" name="email" type="email">
+              </div>
+            </div>
+
+            
+            <div class="form-group">
+              <label for="password" class="col-lg-4 control-label">Password</label>
+              <div class="col-lg-8">
+                <input class="form-control" placeholder="New Password" name="password" type="password" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password_confirmation" class="col-lg-4 control-label">Confirm Password</label>
+              <div class="col-lg-8">
+                <input class="form-control" placeholder="Confirm Password" name="password_confirmation" type="password" value="">
+              </div>
+            </div>
+
+                 <button type="submit" style="margin-left:200px; width:200px" class="btn btn-primary btn-block" data-toggle="modal" data-target="form">
+                  Subscribe
+                </button>
+
+          </fieldset>
+          </form>
+        </div>
+      </div>
+      </div>
+      	</div>

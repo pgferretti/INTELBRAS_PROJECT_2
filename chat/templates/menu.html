@@ -1,0 +1,30 @@
+<!-- Menu -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'login' %}">Bands</a></li>
+        <li><a href="{% url 'home' %}">Contact</a></li>
+        <li><a href="{% url 'home' %}">Protected</a></li>
+        <!-- to resolve NoReverseMatch for 'admin' -->
+        <li><a href="{% url 'admin:index' %}">Login</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+           <li><a href="{% url 'form' %}">Create band</a></li>
+           <li><a href="{% url 'form' %}">Create member</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
